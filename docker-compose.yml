@@ -1,0 +1,8 @@
+version: "2"
+services:
+    docker-app-demo:
+        container_name: docker_app_demo
+        build: .
+        volumes:
+            - ./src:/app
+        user: "1000:1000"
