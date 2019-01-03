@@ -1,0 +1,13 @@
+{
+  "name": "docker-app-demo",
+  "version": "1.0.0",
+  "description": "App development demo with docker",
+  "main": "index.js",
+  "author": "Minh Monmen",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.4.1"
+  }
+}
