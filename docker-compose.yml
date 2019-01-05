@@ -3,7 +3,7 @@ services:
     docker-app-demo:
         container_name: docker_app_demo
         build: .
-        user: "1000:1000"
+        user: "${UID_GID}"
         volumes:
             - ./src:/app
         ports:
