@@ -23,12 +23,12 @@ mongoose.connect(
 // Define express server
 const app = express();
 
-app.get('/', async (req, res, next) => {
+app.get('/list', async (req, res) => {
     const tests = await Test.find({}).exec();
     return res.json(tests);
 });
 
-app.post('/', async (req, res, next) => {
+app.get('/create', async (req, res) => {
     const test = new Test();
     const savedTest = await test.save();
     return res.json(savedTest);
