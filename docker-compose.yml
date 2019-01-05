@@ -3,6 +3,17 @@ services:
     docker-app-demo:
         container_name: docker_app_demo
         build: .
+        user: "1000:1000"
         volumes:
             - ./src:/app
-        user: "1000:1000"
+        ports:
+            - "3000:3000"
+        environment:
+            - PORT=3000
+            # Change hostname to `mongo`
+            - MONGO_URI=mongodb://mongo:27017/test 
+        networks:
+            - persistentstack_common
+networks:
+    persistentstack_common:
+        external: true
